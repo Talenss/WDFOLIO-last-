@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Isaiah Talens' portfolio website showcasing skills in web development, with projects in HTML, CSS, JavaScript, and more.">
+    <meta name="keywords" content="web development, portfolio, Isaiah Talens, website design, HTML, CSS, JavaScript, PHP, MySQL, Vue.js, MongoDB">
+    <meta name="author" content="Isaiah Talens">
+    
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Isaiah Talens - Web Developer Portfolio">
+    <meta property="og:description" content="Explore Isaiah Talens' portfolio to see web development projects and skills in HTML, CSS, JavaScript, and more.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Isaiah Talens - Web Developer Portfolio">
+    <meta name="twitter:description" content="Explore Isaiah Talens' portfolio to see web development projects and skills in HTML, CSS, JavaScript, and more.">
+    <meta name="twitter:image" content="images/logo.png">
+    
+    <title>Isaiah Talens - Web Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" aria-label="Homepage"><img src="images/logo.png" alt="Isaiah Talens Portfolio Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+                <div class="burger-menu" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Skills Menu (with SEO-friendly text) -->
+    <div class="skills-menu" id="skillsMenu">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <h2>My Tech <br>Stacks</h2>
+        <ul>
+            <li>🔹 HTML</li>
+            <li>🔹 CSS</li>
+            <li>🔹 JavaScript</li>
+            <li>🔹 PHP</li>
+            <li>🔹 MySQL</li>
+            <li>🔹 Java</li>
+            <li>🔹 Vue.js</li>
+            <li>🔹 MongoDB</li>
+
+            <h2 class ="stacks">My Soft <br>Skills</h2>
+            <ul>
+                <li>🔹 Problem-Solving</li>
+                <li>🔹 Communication </li>
+                <li>🔹 Adaptability</li>
+                <li>🔹 Attention to Detail</li>
+                <li>🔹 Time Management & Multitasking</li>
+                <li>🔹 Customer/User-Centered Thinking</li>
+                <li>🔹 Resilience & Work Ethic </li>
+        </ul>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="role">Website Developer</h2>
+            <h1 class="name"><span class="italic">Isaiah Genre M. Talens</span></h1>
+            <p class="greeting">
+                Hey there! I’m Isaiah Talens, and this is my digital playground—where creativity meets code! 
+                Explore my work, check out my skills, and see what I bring to the table. Whether you're a 
+                client looking for a standout website or a company seeking a passionate designer, you're 
+                in the right place. Let’s build something amazing together!
+            </p>
+        </div>
+        <div class="hero-img">
+            <img id="profile-img" src="images/IMG_4917.png" alt="Isaiah Genre M. Talens, Web Developer">
+        </div>
+    </section>
+    <hr color="yellow">
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2 class="projects-title">Website Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="images/88logo.png" alt="88 Radar Website">
+                <h2>88 Radar Website</h2>
+                <p>
+                    Developed a website as part of a team for our WEBPUB subject, collaborating on design,
+                    functionality, and content to meet project requirements.
+                </p>
+                <a href="projects.html" class="project-button">View Project</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="images/user.png" alt="OrderBlitz Website">
+                <h2>OrderBlitz Website</h2>
+                <p>
+                    Designed and developed a food delivery website for our INTROWEB subject, working collaboratively 
+                    as a team to implement key features and functionalities.
+                </p>
+                <a href="projects.html" class="project-button">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer index-footer">
+        <p>© Isaiah Talens, February 2025</p>
+        <a href="about.html" aria-label="Learn more about Isaiah Talens">ABOUT</a> & <a href="contact.html" aria-label="Get in touch with Isaiah Talens">CONTACT</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

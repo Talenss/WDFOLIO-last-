@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon links -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+
+    <!-- Meta tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Isaiah Talens for any questions or to collaborate. Fill out the contact form to send a message directly.">
+    <meta name="keywords" content="contact, get in touch, Isaiah Talens, web development, collaboration, email, social media, LinkedIn, GitHub, Twitter">
+    <meta name="author" content="Isaiah Talens">
+    <meta property="og:title" content="Contact Me | Isaiah Talens">
+    <meta property="og:description" content="Have a question or want to work together? Reach out via the contact form or connect on social media.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Me | Isaiah Talens">
+    <meta name="twitter:description" content="Get in touch with Isaiah Talens for questions or collaboration opportunities.">
+    <meta name="twitter:image" content="images/logo.png">
+
+    <title>Contact Me | Isaiah Talens</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact {
+            text-align: center;
+            padding: 15vh 5vw;
+            background-color: #5C1013;
+            color: #FFC107;
+        }
+
+        .contact h1 {
+            font-size: 2.5rem;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 2px solid #FFC107;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #222;
+            color: #FFC107;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #contact-form input:focus, #contact-form textarea:focus {
+            border-color: #FFD700;
+            background-color: #333;
+            outline: none;
+        }
+
+        #contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        #contact-form button {
+            background-color: #FFC107;
+            color: #5C1013;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #contact-form button:hover {
+            background-color: #FFD700;
+            transform: scale(1.05);
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #FFC107;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+
+        .email-link {
+            font-size: 1.2rem;
+            color: #FFC107;
+        }
+
+        .email-link:hover {
+            color: #FFD700;
+        }
+
+        .map-container {
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Dark mode adjustments */
+        .dark-mode .social-links a, .dark-mode .email-link {
+            color: #ffffff;
+        }
+
+        .dark-mode .social-links a:hover, .dark-mode .email-link:hover {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+           <a href="index.html"> <img src="images/logo.png" alt="Logo"> </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+            <div class="burger-menu" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+        </ul>
+    </nav>
+
+    <!-- Skills Sidebar -->
+    <div class="skills-menu" id="skillsMenu">
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close skills menu">✖</button>
+        <h2 class ="stacks">My Tech <br>Stacks</h2>
+        <ul>
+            <li>🔹 HTML</li>
+            <li>🔹 CSS</li>
+            <li>🔹 JavaScript</li>
+            <li>🔹 PHP</li>
+            <li>🔹 MySQL</li>
+            <li>🔹 Java</li>
+            <li>🔹 Vue.js</li>
+            <li>🔹 MongoDB</li>
+
+            <h2 class ="stacks">My Soft <br>Skills</h2>
+            <ul>
+                <li>🔹 Problem-Solving</li>
+                <li>🔹 Communication </li>
+                <li>🔹 Adaptability</li>
+                <li>🔹 Attention to Detail</li>
+                <li>🔹 Time Management & Multitasking</li>
+                <li>🔹 Customer/User-Centered Thinking</li>
+                <li>🔹 Resilience & Work Ethic </li>
+        </ul>
+    </div>
+    </nav>
+    
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <p>Have a question or want to work together? Fill out the form below!</p>
+
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="button" onclick="window.location.href='mailto:imtalens.cscsoc@gmail.com'">
+                Send Message
+            </button>
+        </form>
+        
+
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com/imtalens/" target="_blank">ⓕ FaceBook</a>
+            <a href="https://github.com/Talenss" target="_blank">🐙 GitHub</a>
+            <a href="https://www.instagram.com/isaiah_talens/" target="_blank">🐦 instagram</a>
+        </div>
+
+        <p>Email me at: <a href="mailto:imtalens.cscssoc@gmail.com" class="email-link">imtalens.cscssoc@gmail.com</a></p>
+
+        <div class="map-container">
+            <h2>Find Me Here</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.419225469696!2d120.5923554220595!3d15.131058924195004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f24ec2f5a1f9%3A0x5e0af8a6aaab2282!2sHoly%20Angel%20University!5e0!3m2!1sen!2sph!4v1739363979492!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>  
+    </section>
+
+    <footer class="footer index-footer">
+        <p>© Isaiah Talens, February 2025</p>
+        <a href="about.html">ABOUT</a> & <a href="contact.html">CONTACT</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

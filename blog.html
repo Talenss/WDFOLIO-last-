@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore insightful blog posts on web development, personal growth, and career experiences. Learn about building responsive websites and overcoming challenges in tech.">
+    <meta name="keywords" content="web development, responsive design, coding journey, tech career, front-end development">
+    <meta name="author" content="Isaiah Talens">
+    <title>Blog - Isaiah Talens</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #5C1013;
+            line-height: 1.6;
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        .blog {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #7D0000;
+            color: #FFC107;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, p {
+            transition: color 0.3s ease-in-out;
+        }
+
+        .article-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .article-container:hover {
+            transform: scale(1.02);
+        }
+
+        .article-container img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            align-self: flex-start;
+            margin-top: -20px;
+        }
+
+        article {
+            flex: 1;
+            margin-bottom: 40px;
+            padding: 25px;
+            border-bottom: 2px solid #ccc;
+            color: #FFC107;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            font-size: 2.8rem;
+            color: #FFC107;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #FFC107;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #FFC107;
+        }
+
+        .read-more {
+            display: none;
+        }
+
+        .expanded {
+            display: block !important;
+        }
+
+        .show-more-btn {
+            background-color: #FFC107;
+            color: #7D0000;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .show-more-btn:hover {
+            background-color: #FFD700;
+        }
+
+        /* Dark Mode Styling */
+        .dark-mode h1, .dark-mode h2, .dark-mode p {
+            color: #ffffff !important;
+        }
+
+        .footer {
+            background-color: #7D0000;
+            color: #FFC107;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #FFC107;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            color: #FFD700;
+        }
+
+        .dark-mode .show-more-btn{
+            background-color: #111;
+            color:#FFD700
+        }
+
+        .dark-mode .skills-menu h2 {
+            color: #111 !important;
+        }
+    </style>
+    <script>
+        function toggleReadMore(button) {
+            let article = button.previousElementSibling;
+            article.classList.toggle("expanded");
+            button.textContent = article.classList.contains("expanded") ? "Read Less" : "Read More";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+               <a href="index.html"> <img src="images/logo.png" alt="Logo"> </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="blog.html" class="active">BLOG</a></li>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+            <div class="burger-menu" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+        </ul>
+    </nav>
+
+    <!-- Skills Sidebar -->
+    <div class="skills-menu" id="skillsMenu">
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close skills menu">✖</button>
+        <h2 class ="stacks">My Tech <br>Stacks</h2>
+        <ul>
+            <li>🔹 HTML</li>
+            <li>🔹 CSS</li>
+            <li>🔹 JavaScript</li>
+            <li>🔹 PHP</li>
+            <li>🔹 MySQL</li>
+            <li>🔹 Java</li>
+            <li>🔹 Vue.js</li>
+            <li>🔹 MongoDB</li>
+
+            <h2 class ="stacks">My Soft <br>Skills</h2>
+            <ul>
+                <li>🔹 Problem-Solving</li>
+                <li>🔹 Communication </li>
+                <li>🔹 Adaptability</li>
+                <li>🔹 Attention to Detail</li>
+                <li>🔹 Time Management & Multitasking</li>
+                <li>🔹 Customer/User-Centered Thinking</li>
+                <li>🔹 Resilience & Work Ethic </li>
+        </ul>
+        </ul>
+    </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog">
+        <h1>My Blog</h1>
+        
+        <div class="article-container">
+            <img src="images/shol.png" alt="Web Development Journey" class="shol">
+            <article>
+                <h2 onclick="toggleReadMore(this.nextElementSibling)">My Journey as a Web Developer: From Passion to Struggles and Growth</h2>
+                <p class="read-more expanded">My journey into the world of web development began when I attended CMRICTHS, a specialized school focused on computers, covering everything from Microsoft applications to coding and even hardware. It was here that I discovered my love for programming—especially web development. While I wasn’t the best at designing, I excelled at coding, often bringing my classmates' creative visions to life during group projects.
+                    However, my passion for coding faded when the pandemic hit. Without access to a PC or laptop, I was unable to practice, and the excitement I once had for coding slowly disappeared. The long months of isolation drained me—not just academically but also mentally. I felt lost, stuck in a cycle of boredom and uncertainty, with no clear direction in life. It was as if I had become a shadow of my former self, unable to find joy in the things I once loved.
+                When the world slowly reopened and face-to-face classes resumed, something inside me reignited. The spark of curiosity and creativity began to return, but it wasn’t the same as before. I realized that the struggles I faced during the pandemic had changed me. The setbacks, the isolation, and the lack of motivation were challenges I had to overcome.
+                Now, as I continue on my web development journey, I see those difficult times as a test of resilience. I may not have the same energy as before, but I know that every struggle is an opportunity for growth. The road ahead is uncertain, but I am determined to rebuild my passion, refine my skills, and become stronger than ever</p>
+                <button class="show-more-btn" onclick="toggleReadMore(this)">Read More</button>
+            </article>
+        </div>
+
+        <div class="article-container">
+            <article>
+                <h2 onclick="toggleReadMore(this.nextElementSibling)">Why I Took Jobs Outside My Dream Field</h2>
+                <p class="read-more expanded">Many people assume that once you have a dream career in mind, every job you take should be aligned with that goal. But life doesn’t always work that way. I chose to work jobs that were <strong>unrelated to my dream career</strong> not because I lost sight of my passion, but because I wanted to <strong>help my parents and support myself</strong>.
+                    While these jobs were outside the field I envisioned for my future, they provided me with something equally valuable—<strong>real-world experience</strong>. I wanted to understand what it meant to be part of the workforce, to follow instructions, meet expectations, and navigate both the <strong>positives and challenges</strong> that come with any job. Learning how to <strong>adapt, communicate, and handle pressure</strong> in these roles has been just as important as technical skills in my journey toward my dream job.
+                    Another reason I took these jobs was <strong>financial responsibility</strong>. As I grew older, I realized that my needs and wants had increased compared to when I was younger. At the same time, the <strong>cost of living</strong> and household expenses kept rising. I didn’t want my parents to bear that burden alone. Taking on jobs, even outside my preferred field, allowed me to <strong>contribute financially</strong> and gain a deeper appreciation for hard work and financial independence.
+                    Looking back, I don’t regret stepping into unfamiliar roles. These experiences <strong>taught me discipline, resilience, and a strong work ethic</strong>—qualities that will be just as important in my dream career. Every job, no matter how unrelated, has played a part in shaping who I am today, and for that, I am grateful.</p>
+                <button class="show-more-btn" onclick="toggleReadMore(this)">Read More</button>
+            </article>
+            <img src="images/sholl.png" alt="Job Experience" class="shol">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© Isaiah Talens, February 2025</p>
+        <a href="about.html">ABOUT</a> & <a href="contact.html">CONTACT</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

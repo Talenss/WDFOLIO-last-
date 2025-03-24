@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore a portfolio of web development projects by Isaiah Talens, showcasing innovative websites and applications built with HTML, CSS, JavaScript, PHP, MySQL, and MongoDB.">
+    <meta name="keywords" content="web development, portfolio, HTML, CSS, JavaScript, PHP, MongoDB, web projects, responsive websites">
+    <meta name="author" content="Isaiah Talens">
+    <meta property="og:title" content="Web Development Projects Portfolio - Isaiah Talens">
+    <meta property="og:description" content="Explore the innovative web development projects by Isaiah Talens, featuring responsive designs and intuitive user experiences.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://yourwebsite.com/projects.html">
+    <meta name="robots" content="index, follow">
+    
+    <title>Web Development Projects - Isaiah Talens</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .pprojects {
+            padding: 5vh 5vw;
+            background-color: #5C1013;
+            color: #FFC107;
+            text-align: center;
+        }
+
+        .pproject {
+            background-color: #B06030;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .pproject:hover {
+            transform: scale(1.02);
+        }
+
+        .pproject h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .pproject .title-special {
+            font-family: 'Barriecito', cursive;
+        }
+
+        .pproject p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pproject img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .pproject img:hover {
+            transform: scale(1.05);
+        }
+
+        .pbtn {
+            display: inline-block;
+            background-color: #7D0000;
+            color: #FFC107;
+            padding: 0.6rem 1.2rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .pbtn:hover {
+            background-color: #C04030;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+           <a href="index.html" aria-label="Go to homepage"><img src="images/logo.png" alt="Isaiah Talens Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" aria-label="Go to homepage">HOME</a></li>
+            <li><a href="about.html" aria-label="Learn more about me">ABOUT</a></li>
+            <li><a href="projects.html" aria-label="Explore my projects">PROJECTS</a></li>
+            <li><a href="contact.html" aria-label="Get in touch with me">CONTACT</a></li>
+            <li><a href="resume.html" aria-label="View my resume">RESUME</a></li>
+            <li><a href="blog.html" aria-label="Read my blog">BLOG</a></li>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+            <div class="burger-menu" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+        </ul>
+    </nav>
+
+    <!-- Skills Sidebar -->
+    <div class="skills-menu" id="skillsMenu">
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close skills menu">✖</button>
+        <h2 class ="stacks">My Tech <br>Stacks</h2>
+        <ul>
+            <li>🔹 HTML</li>
+            <li>🔹 CSS</li>
+            <li>🔹 JavaScript</li>
+            <li>🔹 PHP</li>
+            <li>🔹 MySQL</li>
+            <li>🔹 Java</li>
+            <li>🔹 Vue.js</li>
+            <li>🔹 MongoDB</li>
+
+            <h2 class ="stacks">My Soft <br>Skills</h2>
+            <ul>
+                <li>🔹 Problem-Solving</li>
+                <li>🔹 Communication </li>
+                <li>🔹 Adaptability</li>
+                <li>🔹 Attention to Detail</li>
+                <li>🔹 Time Management & Multitasking</li>
+                <li>🔹 Customer/User-Centered Thinking</li>
+                <li>🔹 Resilience & Work Ethic </li>
+        </ul>
+        </ul>
+    </div>
+    </nav>
+
+    <section class="pprojects">
+        <h1>My Web Development Projects</h1>
+
+        <div class="pproject">
+            <h2 class="title-special">88 Radar Website</h2>
+            <p>This project was a collaborative effort for our <strong>WEBPUB</strong> subject, focusing on developing a visually striking and highly functional website for <strong>88-Radar</strong>, a bar and entertainment venue. The website captures the venue’s vibrant atmosphere and provides users with an engaging experience through well-structured navigation and interactive elements.</p>
+            <img src="images/webpub.png" alt="88 Radar Website screenshot showing homepage">
+            <p><strong>Key Features:</strong></p>
+            
+                <li>Elegant and responsive UI design</li>
+                <li>Dynamic menu showcasing food and beverages</li>
+                <li>Booking system for karaoke and events</li>
+                <li>Integrated customer reviews and feedback</li>
+            
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+            <a href="https://github.com/Talenss/88-Radar.git" class="pbtn" aria-label="View GitHub repository for 88 Radar Website">GitHub Repo</a>
+        </div>
+
+        <div class="pproject">
+            <h2 class="title-special">OrderBlitz</h2>
+            <p>Developed as part of the <strong>INTROWEB</strong> subject, <strong>OrderBlitz</strong> is a food delivery platform designed to offer users a smooth and hassle-free online ordering experience. The project focuses on <strong>UI/UX best practices</strong>, ensuring intuitive navigation, fast performance, and a seamless checkout process.</p>
+            <img src="images/introweb.png" alt="OrderBlitz Website screenshot showcasing food delivery interface">
+            <p><strong>Key Features:</strong></p>
+            
+                <li>Modern and responsive interface for desktop and mobile</li>
+                <li>Effortless menu browsing and ordering system</li>
+                <li>Real-time order tracking for enhanced transparency</li>
+                <li>Optimized backend for efficient data processing</li>
+            
+            <p><strong>Tech Stack:</strong> PHP, Mysql, MongoDB, HTML, JavaScript, CSS</p>
+            <a href="https://github.com/Talenss/OrderBlitz.git" class="pbtn" aria-label="View GitHub repository for OrderBlitz">GitHub Repo</a>
+        </div>
+    </section>
+
+    <footer class="footer index-footer">
+        <p>© Isaiah Talens, February 2025</p>
+        <a href="about.html" aria-label="About me">ABOUT</a> & <a href="contact.html" aria-label="Contact me">CONTACT</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
